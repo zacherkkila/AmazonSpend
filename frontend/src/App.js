@@ -9,7 +9,8 @@ import {
   Toolbar,
   Button,
   ThemeProvider,
-  createTheme
+  createTheme,
+  GlobalStyles
 } from '@mui/material';
 import { Line, Pie, Bar } from 'react-chartjs-2';
 import {
@@ -49,6 +50,16 @@ const theme = createTheme({
     },
     secondary: {
       main: '#dc004e',
+    },
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          margin: 0,
+          padding: 0,
+        },
+      },
     },
   },
 });
@@ -415,6 +426,14 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles
+        styles={{
+          body: {
+            margin: 0,
+            padding: 0,
+          },
+        }}
+      />
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
