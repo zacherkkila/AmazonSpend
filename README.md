@@ -2,6 +2,8 @@
 
 Pure Claude AI Created Vibe Code Test to Analyze Spending
 
+Yeah it doesn't have typescript and a lot of it is probably garbage.. I haven't even read the code
+
 ## Quick Start
 
 1. Drop your `OrderHistory.csv` file in the `backend` folder
