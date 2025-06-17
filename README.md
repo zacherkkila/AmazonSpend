@@ -1,57 +1,47 @@
-# Amazon Purchase History Analyzer
+# Amazon Purchase Analyzer
 
-This application analyzes your Amazon purchase history and provides visual insights through interactive charts.
+Pure Claude AI Created Vibe Code Test to Analyze Spending
+
+## Quick Start
+
+1. Drop your `OrderHistory.csv` file in the `backend` folder
+   - You can get this from Amazon's "Your Orders" page
+   - Click "Download Order Reports" and select "Items" report type
+   - Rename it to `OrderHistory.csv` and drop it in the `backend` folder
+
+2. Run the dev environment:
+```bash
+./dev.sh
+```
+
+This will start both the frontend and backend in development mode with hot reloading.
 
 ## Features
 
-- Total spending analysis
-- Monthly spending trends
-- Category-wise spending breakdown
-- Interactive charts and graphs
-- Modern Material-UI interface
+- 📊 Monthly spending trends
+- 🍕 Spending by category (with percentages)
+- 📈 Yearly spending breakdown
+- 💰 Purchase amount distribution
+- 📝 Detailed purchase table with search and sort
+- 📊 Average purchase amount by category
 
-## Prerequisites
+## Tech Stack
 
-- Docker and Docker Compose installed on your system
-- Amazon purchase history CSV file (Retail.OrderHistory.1.csv)
-
-## Getting Started
-
-1. Make sure your Amazon purchase history CSV file (Retail.OrderHistory.1.csv) is in the root directory of the project.
-
-2. Build and start the application using Docker Compose:
-   ```bash
-   docker-compose up --build
-   ```
-
-3. Open your browser and navigate to:
-   ```
-   http://localhost:5000
-   ```
+- Frontend: React + Material-UI + Chart.js
+- Backend: Node.js + Express
+- Development: Docker + Hot Reloading
 
 ## Development
 
-If you want to run the application in development mode:
+The app runs in development mode with hot reloading enabled. Any changes to the frontend or backend code will automatically trigger a rebuild.
 
-1. Install dependencies:
-   ```bash
-   npm install
-   cd frontend && npm install
-   ```
+To stop the development environment:
+```bash
+docker-compose down
+```
 
-2. Start the backend server:
-   ```bash
-   npm run dev
-   ```
+## Notes
 
-3. In a separate terminal, start the frontend:
-   ```bash
-   npm run client
-   ```
-
-## Technologies Used
-
-- Backend: Node.js, Express
-- Frontend: React, Material-UI, Chart.js
-- Containerization: Docker
-- Data Processing: csv-parse 
+- The CSV file is gitignored for privacy
+- Make sure to use the "Items" report type from Amazon
+- The app assumes USD currency 
